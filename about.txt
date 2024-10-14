@@ -1,0 +1,40 @@
+Architecture Explanation
+I am building an Ai Voice Assistan, it works by connecting livekit server.
+The livekit server is hosted by livekit but i can host it myself using the open source code
+The livekit server is responsible for the transmision of data.
+It takes the voice data from the frontend and sent it to the backend where my ai agent is gonna process it and come up with some kind of response
+
+The server is an intergral part here.
+Inside the enviroment variable file i am putting a few different keys and tokens that I need to conncet to the server.
+
+The frontend is the user facing application.
+(Shows preview of the video and shows the text logs and whats the agent is saying)
+
+I will be using what is provided by livekit to test the application asap.
+
+So the frontend or a client, that connects to the livekit.
+My agent/ai will conncet to server as well.
+
+The server handles the transmision of the data between those two different components.
+Thats the advantage of using livekit in this project.
+Its really low latency transmision of data, so the response is more rapid.
+
+After likekit project is created -> Settings->keys->create new key.
+Copy the three parts of data into to my enviroment variable file.
+Important to type correctly !
+Last we add the openai api key.
+platform.openai.com/api-keys -> create new and the copy it into the enviroment variable file.
+
+The reason all those keys are needed is so I can connect to the livekit, so when the frontend client is used 
+I have a way to transmit my information to the AI that I am currently working on.
+
+main.py
+I will be creating a simple chat bot and then I will be connect this to some agent fuctionality
+
+
+How to start using this Assistan.
+First run my agent: python main.py start
+Once the agent starts I need to set up a new room and this will triger the livekit server to send a request so the agent can connect to it.
+So it can start listening for any voice request or any of the voice messages I sent.
+
+https://agents-playground.livekit.io/

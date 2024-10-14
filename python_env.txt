@@ -1,0 +1,10 @@
+python -m venv ai
+ai is the name of the virtual environment
+
+ai\Scripts\activate
+activates the environment 
+
+pip install livekit-agents livekit-plugins-openai livekit-plugins-silero python-dotenv
+Collecting livekit-agents
+
+silero is used for voice activity detection
